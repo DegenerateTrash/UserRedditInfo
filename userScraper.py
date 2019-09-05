@@ -3,10 +3,15 @@ import requests
 import urllib.request
 import os
 import time
+import prawredsettings as settings
 
 startpro = time.time()
 
 
+# Enter your app details below
+reddit = praw.Reddit(client_id=settings.clientid,
+                     client_secret=settings.secret,
+                     user_agent=settings.agent)
 
 #Enter Username
 user_name = str(input("User Name: "))
