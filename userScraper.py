@@ -19,8 +19,10 @@ submissions = reddit.redditor(user_name).submissions.new(limit=None)
 comments = reddit.redditor(user_name).comments.new(limit=None)
 
 def wipeUserFile(user_name):
+    if not os.path.exists("users/"):
+        os.mkdir("users/")
     start = time.time()
-    userfile = open("{} Reddit Data.txt".format(user_name),"w", encoding='utf-8')
+    userfile = open("users/{} Reddit Data.txt".format(user_name),"w", encoding='utf-8')
     userfile.close()
     print("It took {0:0.1f} seconds to wipe {1}'s file".format(time.time() - start, user_name))
     return
