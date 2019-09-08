@@ -30,4 +30,11 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignore the settings for praw
 prawredsettings.py
+
+# Ignore the pycache files
+/__pycache__/*
+
+# Ignore already made user files
+/users/*
