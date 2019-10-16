@@ -56,6 +56,9 @@ def getUserPosts(user_name):
         self_texts.append("Post Score: ")
         self_texts.append(str(link.score))
         self_texts.append("\n")
+        self_texts.append("Comments: ")
+        self_texts.append(str(link.num_comments))
+        self_texts.append("\n")
         self_texts.append("--------------------------------------------------------------------\n")
         postnum += 1
         os.system("cls")
